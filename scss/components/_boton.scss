@@ -1,0 +1,50 @@
+
+/* BUTONES GENERALES */
+.btn-recetas {
+    padding: 5px 10px;
+    background-color: $background-general;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-recetas:hover {
+    background-color: #cb0e0eed;
+    color: white;
+}
+
+.btn-footer {
+    padding: 5px 10px;
+    background-color: $background-general;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-footer:hover {
+    background-color: #cb0e0eed;
+    color: white;
+}
+
+.btn-suscripción {
+    padding: 5px 10px;
+    background-color: #cb0e0eed;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-suscripción:hover {
+    background-color: $background-general;
+
+}
+
+.btn-donar {
+    padding: 5px 10px;
+    background-color: $background-general;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-donar:hover {
+    background-color: #cb0e0eed;
+    color: white;
+}

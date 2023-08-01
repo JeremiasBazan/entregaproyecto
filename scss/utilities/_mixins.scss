@@ -1,0 +1,72 @@
+// STYLE MEDIA QUERIES
+@mixin mediaqueries-celu-s{
+	.banner-index {
+        height: 80vh;
+    }
+    .banner-recetas{
+        height: 60vh;
+    }
+    .banner-quienessomos{
+        height: 50vh;
+    }
+    .banner-novedades{
+        height: 60vh;
+    }
+    .banner-contacto{
+        height: 50vh;
+    }
+}
+
+@mixin mediaqueries-celu-xl{
+    .banner-index {
+        height: 100vh;
+    }
+    .banner-recetas{
+        height: 50vh;
+    }
+    .banner-quienessomos{
+        height: 45vh;
+    }
+    .banner-novedades{
+        height: 45vh;
+    }
+    .banner-contacto{
+        height: 50vh;
+    }
+}
+
+@mixin mediaqueries-tablet{
+    .banner-index {
+        height: 125vh;
+    }
+    .banner-recetas{
+        height: 45vh;
+    }
+    .banner-quienessomos{
+        height: 40vh;
+    }
+    .banner-novedades{
+        height: 45vh;
+    }
+    .banner-contacto{
+        height: 45vh;
+    }
+}
+
+@mixin mediaqueries-desktop{
+    .banner-index {
+        height: 55vh;
+    }
+    .banner-recetas{
+        height: 50vh;
+    }
+    .banner-quienessomos{
+        height: 50vh;
+    }
+    .banner-novedades{
+        height: 50vh;
+    }
+    .banner-contacto{
+        height: 50vh;
+    }
+}

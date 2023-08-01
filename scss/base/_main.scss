@@ -1,0 +1,80 @@
+
+/* MAIN ----------*/
+.banner-index {
+    background-image: url('../assets/img/banners/banneroscuro.jpg');
+    width: 100%;
+    padding: 3rem 0;
+    opacity: 5;
+}
+
+.img-banerprincipal {
+    background-image: url('../assets/img/banners/banner-index.jpg');
+}
+
+.cardcursos-1 {
+    background-image: url('../assets/img/cursos/cursos\ de\ cocina.jpg');
+    width: 100%;
+}
+
+.cardcursos-2 {
+    background-image: url('../assets/img/cursos/alumnos.jpg');
+    width: 100%;
+}
+
+.cardcursos-3 {
+    background-image: url('../assets/img/cursos/premios-proyecto.jpg');
+    width: 100%;
+}
+
+.titulo-cursos {
+    background-color: rgba(0, 0, 0, 0.452);
+    font-weight: bold;
+}
+
+/* RECETAS ------------------------------------------------------------------------------- */
+.banner-recetas {
+    background-image: url("../assets/img/header/recetas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    font-size: 30px;
+}
+
+/* QUIENES SOMOS ------------------------------------------------------------------------------- */
+.banner-quienessomos {
+    background-image: url("../assets/img/header/historia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    font-size: 30px;
+}
+
+/* NOVADADES ------------------------------------------------------------------------------- */
+.banner-novedades {
+    background-image: url("../assets/img/header/novedades.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    font-size: 30px;
+}
+
+/* CONTACTO ------------------------------------------------------------------------------- */
+.banner-contacto {
+    background-image: url("../assets/img/header/somos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    font-size: 30px;
+}
+
+.img-suscripción {
+    width: 60%;
+}
+
+.banner-dar {
+    background-color: rgba(0, 0, 0, 0.452);
+}

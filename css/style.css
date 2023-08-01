@@ -1,259 +1,253 @@
+@charset "UTF-8";
 /* STYLES GENERALES ------------------------------------------------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'pp-font';
-    src: url("../assets/fonts/static/Montserrat-Light.ttf");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: 'pp-font';
-    font-size: 85.5%;
+  font-family: "pp-font";
+  font-size: 85.5%;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
-footer {
-    background-color: rgba(195, 137, 3, 0.568);
+@media only screen and (max-width: 420px) {
+  .banner-index {
+    height: 80vh;
+  }
+  .banner-recetas {
+    height: 60vh;
+  }
+  .banner-quienessomos {
+    height: 50vh;
+  }
+  .banner-novedades {
+    height: 60vh;
+  }
+  .banner-contacto {
+    height: 50vh;
+  }
 }
-
-.log-footer {
-    width: 15%;
+@media only screen and (min-width: 420px) {
+  .banner-index {
+    height: 100vh;
+  }
+  .banner-recetas {
+    height: 50vh;
+  }
+  .banner-quienessomos {
+    height: 45vh;
+  }
+  .banner-novedades {
+    height: 45vh;
+  }
+  .banner-contacto {
+    height: 50vh;
+  }
 }
-
-.log-principalfooter {
-    width: 55%;
+@media only screen and (min-width: 600px) {
+  .banner-index {
+    height: 125vh;
+  }
+  .banner-recetas {
+    height: 45vh;
+  }
+  .banner-quienessomos {
+    height: 40vh;
+  }
+  .banner-novedades {
+    height: 45vh;
+  }
+  .banner-contacto {
+    height: 45vh;
+  }
 }
-
-/* BUTONES GENERALES */
-
-.btn-recetas {
-    padding: 5px 10px;
-    background-color: rgb(228, 174, 26);
-    font-weight: bold;
-    font-size: 1.2rem;
+@media only screen and (min-width: 992px) {
+  .banner-index {
+    height: 55vh;
+  }
+  .banner-recetas {
+    height: 50vh;
+  }
+  .banner-quienessomos {
+    height: 50vh;
+  }
+  .banner-novedades {
+    height: 50vh;
+  }
+  .banner-contacto {
+    height: 50vh;
+  }
 }
-
-.btn-recetas:hover {
-    background-color: #cb0e0eed;
-    color: white;
+@font-face {
+  font-family: "pp-font";
+  src: url("../assets/fonts/static/Montserrat-Light.ttf");
 }
-
-.btn-footer {
-    padding: 5px 10px;
-    background-color: rgb(228, 174, 26);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.btn-footer:hover {
-    background-color: #cb0e0eed;
-    color: white;
-}
-
-.btn-suscripción {
-    padding: 5px 10px;
-    background-color: #cb0e0eed;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.btn-suscripción:hover {
-    background-color: rgb(228, 174, 26);
-
-}
-
-.btn-donar {
-    padding: 5px 10px;
-    background-color: rgb(228, 174, 26);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.btn-donar:hover {
-    background-color: #cb0e0eed;
-    color: white;
-}
-
-/* STYLE INDEX ------------------------------------------------------------------------------- */
-/* NAV ----------*/
-.color-nav {
-    background-color: rgb(228, 174, 26);
-}
-
-.pedir-recetas {
-    padding-right: 4%;
-    text-align: left;
-}
-
-.log-topnav {
-    width: 50%;
-}
-
-.log-nav {
-    width: 70%;
-}
-
-.log-navsomos {
-    width: 64%;
-}
-
 /* MAIN ----------*/
 .banner-index {
-    background-image: url('../assets/img/banners/banneroscuro.jpg');
-    width: 100%;
-    padding: 3rem 0;
-    opacity: 5;
+  background-image: url("../assets/img/banners/banneroscuro.jpg");
+  width: 100%;
+  padding: 3rem 0;
+  opacity: 5;
 }
 
 .img-banerprincipal {
-    background-image: url('../assets/img/banners/banner-index.jpg');
+  background-image: url("../assets/img/banners/banner-index.jpg");
 }
 
 .cardcursos-1 {
-    background-image: url('../assets/img/cursos/cursos\ de\ cocina.jpg');
-    width: 100%;
+  background-image: url("../assets/img/cursos/cursos de cocina.jpg");
+  width: 100%;
 }
 
 .cardcursos-2 {
-    background-image: url('../assets/img/cursos/alumnos.jpg');
-    width: 100%;
+  background-image: url("../assets/img/cursos/alumnos.jpg");
+  width: 100%;
 }
 
 .cardcursos-3 {
-    background-image: url('../assets/img/cursos/premios-proyecto.jpg');
-    width: 100%;
+  background-image: url("../assets/img/cursos/premios-proyecto.jpg");
+  width: 100%;
 }
 
 .titulo-cursos {
-    background-color: rgba(0, 0, 0, 0.452);
-    font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.452);
+  font-weight: bold;
 }
 
-/* STYLE RECETAS ------------------------------------------------------------------------------- */
+/* RECETAS ------------------------------------------------------------------------------- */
 .banner-recetas {
-    background-image: url("../assets/img/header/recetas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 50vh;
-    font-size: 30px;
+  background-image: url("../assets/img/header/recetas.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  font-size: 30px;
 }
 
-/* STYLE QUIENES SOMOS ------------------------------------------------------------------------------- */
+/* QUIENES SOMOS ------------------------------------------------------------------------------- */
 .banner-quienessomos {
-    background-image: url("../assets/img/header/historia.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 50vh;
-    font-size: 30px;
+  background-image: url("../assets/img/header/historia.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  font-size: 30px;
 }
 
-/* STYLE NOVADADES ------------------------------------------------------------------------------- */
+/* NOVADADES ------------------------------------------------------------------------------- */
 .banner-novedades {
-    background-image: url("../assets/img/header/novedades.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 50vh;
-    font-size: 30px;
+  background-image: url("../assets/img/header/novedades.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  font-size: 30px;
 }
 
-/* STYLE CONTACTO ------------------------------------------------------------------------------- */
+/* CONTACTO ------------------------------------------------------------------------------- */
 .banner-contacto {
-    background-image: url("../assets/img/header/somos.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 50vh;
-    font-size: 30px;
+  background-image: url("../assets/img/header/somos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  font-size: 30px;
 }
 
 .img-suscripción {
-    width: 60%;
+  width: 60%;
 }
 
 .banner-dar {
-    background-color: rgba(0, 0, 0, 0.452);
+  background-color: rgba(0, 0, 0, 0.452);
 }
 
-/* STYLE MEDIA QUERIES ------------------------------------------------------------------------------- */
-@media only screen and (max-width: 420px) {
-    .banner-index {
-        height: 80vh;
-    }
-    .banner-recetas{
-        height: 60vh;
-    }
-    .banner-quienessomos{
-        height: 50vh;
-    }
-    .banner-novedades{
-        height: 60vh;
-    }
-    .banner-contacto{
-        height: 50vh;
-    }
+/* NAV ----------*/
+.color-nav {
+  background-color: rgb(228, 174, 26);
 }
 
-@media only screen and (min-width: 420px) {
-    .banner-index {
-        height: 100vh;
-    }
-    .banner-recetas{
-        height: 50vh;
-    }
-    .banner-quienessomos{
-        height: 45vh;
-    }
-    .banner-novedades{
-        height: 45vh;
-    }
-    .banner-contacto{
-        height: 50vh;
-    }
+.pedir-recetas {
+  padding-right: 4%;
+  text-align: left;
 }
 
-@media only screen and (min-width: 600px) {
-    .banner-index {
-        height: 125vh;
-    }
-    .banner-recetas{
-        height: 45vh;
-    }
-    .banner-quienessomos{
-        height: 40vh;
-    }
-    .banner-novedades{
-        height: 45vh;
-    }
-    .banner-contacto{
-        height: 45vh;
-    }
+.log-topnav {
+  width: 50%;
 }
 
-@media only screen and (min-width: 992px) {
-    .banner-index {
-        height: 55vh;
-    }
-    .banner-recetas{
-        height: 50vh;
-    }
-    .banner-quienessomos{
-        height: 50vh;
-    }
-    .banner-novedades{
-        height: 50vh;
-    }
-    .banner-contacto{
-        height: 50vh;
-    }
+.log-nav {
+  width: 70%;
 }
+
+.log-navsomos {
+  width: 64%;
+}
+
+footer {
+  background-color: rgba(195, 137, 3, 0.568);
+}
+
+.log-footer {
+  width: 15%;
+}
+
+.log-principalfooter {
+  width: 55%;
+}
+
+/* BUTONES GENERALES */
+.btn-recetas {
+  padding: 5px 10px;
+  background-color: rgb(228, 174, 26);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn-recetas:hover {
+  background-color: rgba(203, 14, 14, 0.9294117647);
+  color: white;
+}
+
+.btn-footer {
+  padding: 5px 10px;
+  background-color: rgb(228, 174, 26);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn-footer:hover {
+  background-color: rgba(203, 14, 14, 0.9294117647);
+  color: white;
+}
+
+.btn-suscripción {
+  padding: 5px 10px;
+  background-color: rgba(203, 14, 14, 0.9294117647);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn-suscripción:hover {
+  background-color: rgb(228, 174, 26);
+}
+
+.btn-donar {
+  padding: 5px 10px;
+  background-color: rgb(228, 174, 26);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.btn-donar:hover {
+  background-color: rgba(203, 14, 14, 0.9294117647);
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

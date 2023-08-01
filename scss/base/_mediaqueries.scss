@@ -1,0 +1,15 @@
+@media only screen and (max-width: 420px) {
+    @include mediaqueries-celu-s;
+}
+
+@media only screen and (min-width: 420px) {
+    @include mediaqueries-celu-xl;
+}
+
+@media only screen and (min-width: 600px) {
+    @include mediaqueries-tablet;
+}
+
+@media only screen and (min-width: 992px) {
+    @include mediaqueries-desktop;
+}
