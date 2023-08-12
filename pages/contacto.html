@@ -24,27 +24,128 @@
         <div class="py-2">
             <div class="container d-flex flex-wrap justify-content-between">
                 <div class="pedir-recetas">
-                    <button type="button" class="btn btn-danger">PEDIR RECETAS</button>
+                    <a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                        target="_blank"><button type="button" class="btn btn-danger">PEDIR RECETAS</button></a>
                 </div>
 
                 <div class="text-end">
                     <ul class="d-flex list-inline">
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...."
+                                target="_blank" class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://www.instagram.com/" target="_blank"
+                                class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="../assets/log/instagram.png" alt="instagram"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="../assets/log/facebook.png" alt="facebook"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="../assets/log/log-dar.png" alt="donar"></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" class="text-decoration-none p-lg-2"><img
+                                    class="log-topnav" src="../assets/log/facebook.png" alt="facebook"></a></li>
+                        <li><a href="" class="text-decoration-none p-lg-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#donar"><img class="log-topnav" src="../assets/log/log-dar.png"
+                                    alt="donar"></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de
+                                                            Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de
+                                                            Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado
+                                                            Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del
+                                                            titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la
+                                                            tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de
+                                                            crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration"
+                                                            class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de
+                                                            dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="color-nav px-3 py-2">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="./index.html" class="d-flex align-items-center me-lg-auto text-white text-decoration-none">
+                    <a href="../index.html"
+                        class="d-flex align-items-center me-lg-auto text-white text-decoration-none">
                         <img src="../assets/log/log-principal.png" alt="logo-principal">
                     </a>
 
@@ -99,7 +200,7 @@
         <!-- SECCIÓN DE CONTACTO -->
         <section class="container">
             <div class="row">
-                <div class="col">
+                <div class="col m-5">
                     <div class="row">
                         <div class="col-12 col-sm-3"></div>
                         <div class="col p-md-4 text-center">
@@ -128,7 +229,25 @@
                                         id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-recetas fw-bold">ENVIAR</button>
+                                    <button class="btn btn-recetas fw-bold" type="button"
+                                    data-bs-toggle="modal" data-bs-target="#enviado">ENVIAR</button>
+                            <div class="modal fade" id="enviado" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="enviado" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="enviado"></Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <h4>¡Mensaje Enviado!</h4>
+                                            <p>Ahora alguien de nuestro equipo se contactará con vos, lo más pronto posible, gracias por tu paciencia.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                                 </div>
                             </form>
                         </div>
@@ -153,7 +272,25 @@
                     <input type="email" class="form-control shadow-none border-secondary"
                         id="exampleFormControlInput1" placeholder="mail">
                         <div class="p-4">
-                            <button class="btn btn-suscripción">SUSCRIBIRME</button>
+                            <button class="btn btn-suscripción" type="button"
+                            data-bs-toggle="modal" data-bs-target="#suscripción">SUSCRIBIRME</button>
+                            <div class="modal fade" id="suscripción" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="suscripción" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="suscripción"></Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <h4>Suscripción completa</h4>
+                                            <p>¡Gracias por elegirnos!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                 </div>
               </div>
@@ -167,7 +304,102 @@
                   <div class="col-lg-6 mx-auto">
                     <p class="fs-5 mb-4 text-white">La generosidad ayuda a crear más oportunidades para que las personas puedan aprender y desarrollar su talento en la cocina.</p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                      <button class="btn btn-donar">DONAR</button>
+                      <button class="btn btn-donar" type="button"
+                      data-bs-toggle="modal" data-bs-target="#donar">DONAR</button>
+                      <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de
+                                                            Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de
+                                                            Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado
+                                                            Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del
+                                                            titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la
+                                                            tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de
+                                                            crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration"
+                                                            class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de
+                                                            dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                   </div>
                 </div>
@@ -177,15 +409,115 @@
 
 
     <footer class=" p-4">
-        <div class="container">
+        <div class="container text-center">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 p-2">
                 <div class="col mb-3">
                     <ul class="nav flex-column align-content-center align-items-center">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
-                                    class="btn btn-donar">DONAR</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted" type="button"
+                                data-bs-toggle="modal" data-bs-target="#donar"><button type="button"
+                                    class="btn btn-donar">DONAR</button></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de
+                                                            Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de
+                                                            Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado
+                                                            Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del
+                                                            titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la
+                                                            tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de
+                                                            crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration"
+                                                            class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de
+                                                            dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mb-2"><a
+                                href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">PEDIR RECETAS</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a
+                                href="https://play.google.com/store/apps/details?id=com.mufumbo.android.recipe.search&hl=es&gl=US&pli=1"
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">DESCARGAR LA APP</button></a></li>
                     </ul>
                 </div>
@@ -211,12 +543,16 @@
                 <div class="col mb-3">
                     <h5>REDES SOCIALES</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
-                                    class="log-footer" src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
-                                    class="log-footer" src="../assets/log/instagram.png" alt="instagram"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
-                                    class="log-footer" src="../assets/log/facebook.png" alt="facebook"></a></li>
+                        <li class="nav-item mb-2 p-2"><a
+                                href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...."
+                                target="_blank" class="nav-link p-0 text-muted"><img class="log-footer"
+                                    src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
+                        <li class="nav-item mb-2 p-2"><a href="https://www.instagram.com/" target="_blank"
+                                class="nav-link p-0 text-muted"><img class="log-footer"
+                                    src="../assets/log/instagram.png" alt="instagram"></a></li>
+                        <li class="nav-item mb-2 p-2"><a href="https://www.facebook.com/" target="_blank"
+                                class="nav-link p-0 text-muted"><img class="log-footer" src="../assets/log/facebook.png"
+                                    alt="facebook"></a></li>
                     </ul>
                 </div>
 

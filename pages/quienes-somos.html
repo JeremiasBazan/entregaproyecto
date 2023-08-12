@@ -24,27 +24,122 @@
         <div class="py-2">
             <div class="container d-flex flex-wrap justify-content-between">
                 <div class="pedir-recetas">
-                    <button type="button" class="btn btn-danger">PEDIR RECETAS</button>
+                    <a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                        target="_blank"><button type="button" class="btn btn-danger">PEDIR RECETAS</button></a>
                 </div>
 
                 <div class="text-end">
                     <ul class="d-flex list-inline">
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...."
+                                target="_blank" class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://www.instagram.com/" target="_blank"
+                                class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="../assets/log/instagram.png" alt="instagram"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="../assets/log/facebook.png" alt="facebook"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="../assets/log/log-dar.png" alt="donar"></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" class="text-decoration-none p-lg-2"><img
+                                    class="log-topnav" src="../assets/log/facebook.png" alt="facebook"></a></li>
+                        <li><a href="" class="text-decoration-none p-lg-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#donar"><img class="log-topnav" src="../assets/log/log-dar.png"
+                                    alt="donar"></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration" class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit" class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-recetas"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="color-nav px-3 py-2">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="./index.html" class="d-flex align-items-center me-lg-auto text-white text-decoration-none">
+                    <a href="../index.html" class="d-flex align-items-center me-lg-auto text-white text-decoration-none">
                         <img src="../assets/log/log-principal.png" alt="logo-principal">
                     </a>
 
@@ -104,8 +199,10 @@
                     <img src="../assets/img/banners/banner-index.jpg" class="d-block mx-lg-auto img-fluid" alt="banner-presentacion" width="700" height="500" loading="lazy">
                   </div>
                   <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">Responsive left-aligned hero with image</h1>
-                    <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Nuestra Cocina JB</h1>
+                    <p class="lead"> <b>«Desde que comenzamos con nuestra cocina, acompañamos a cada persona en el viaje, de principio a fin»</b> <br>
+                        Somos un grupo de profesionales con mucha fuerza y dedicación, llevamos adelante este proyecto hace más de 5 años, brindanos la mejor atención a cada personsa, para que se pueda capacitar y desarrollar el talento en la cocina. <br>
+                        ¡Damos seguimiento personalizado y cuidadoso de las recetas!</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     </div>
                   </div>
@@ -124,11 +221,36 @@
                         <div class="card shadow-sm">
                             <img src="../assets/img/equipo/jorge.jpg" alt="personal-de-equipo-1">
                             <div class="card-body">
-                                <h3>Jorge Acuña</h3>
+                                <h3>Jorge Bazán</h3>
                                 <p class="fw-bold text-secondary">Fundador</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">BIOGRAFIA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#biografia1">
+                                            BIOGRAFIA
+                                        </button>
+                                        <div class="modal fade" id="biografia1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="biografia1"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="biografia1">Jorge Bazán
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Se incorporó a JB en 2018 y ha ocupado varios cargos a nivel corporativo, siendo su último el de Director Senior de Finanzas Corporativas. Previo a ello, tuvo una larga y exitosa carrera internacional en Europa y los Estados Unidos. Trabajó para el IFG Group, un banco privado suizo, para Tyco International en Suiza y Princeton, Nueva Jersey y para Sabre Holdings en Londres. Comenzó su carrera trabajando para una consultora financiera en Argentina y para el gobierno del país, como parte del Ministerio de Hacienda y Finanzas Públicas. Jorge es Licenciado en Economía de la Universidad de Buenos Aires y posee una Maestría en Finanzas de la Universidad Torcuato Di Tella y una Maestría en Administración de Empresas con énfasis en Finanzas de la London Business School.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +264,32 @@
                                 <p class="fw-bold text-secondary">Dirigente</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">BIOGRAFIA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#biografia2">
+                                            BIOGRAFIA
+                                        </button>
+                                        <div class="modal fade" id="biografia2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="biografia2"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="biografia2">Nicole Pereyra
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Nombrada vicepresidenta en julio 2022, Karina ingresó a Cocina JB en 2020 como asistente administrativa. Desde entonces, ha tenido una carrera de constante crecimiento, pasando por diversas posiciones dentro del departamento de finanzas. En 2022, asumió el rol de Dirigente General. A lo largo de su carrera en la Cocina JB, ha sido merecedora del Premio del Presidente en 2022, como también del reconocimiento de la “Red de Mujeres Líderes” de JB Corporation en el año 2020 debido a su trayectoria y compromiso. Nicole es Contadora de la Universidad de la República de Uruguay y posee un MBA Senior del IEEM de la Universidad de Montevideo.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +303,32 @@
                                 <p class="fw-bold text-secondary">Cocinero</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">BIOGRAFIA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#biografia3">
+                                            BIOGRAFIA
+                                        </button>
+                                        <div class="modal fade" id="biografia3" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="biografia3"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="biografia3">Jorge Bazán
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                       Musty Kivo (Buenos Aires, 30 de octubre de 1972) es un cocinero, empresario, ejecutivo y chef célebre ítalo-argentina que actualmente reside en Brasil.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -169,77 +341,137 @@
         <!-- SECCIÓN DE EMPRESAS -->
         <section class="container p-5">
             <div class="text-center fw-bold p-4">
-                <h2>Empresas que nos ayudan</h2>
+                <h2>Marcas que nos ayudan</h2>
             </div>
             <div class="row text-center">
-                <div class="col-lg-2">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
+                <div class="col-lg-1">
                 </div>
                 <div class="col-lg-2">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
+                    <img src="../assets/img/marcas/calsa.png" alt="marca1">
                 </div>
                 <div class="col-lg-2">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
+                    <img src="../assets/img/marcas/hileret-zucra.png" alt="marca2">
                 </div>
                 <div class="col-lg-2">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
+                    <img src="../assets/img/marcas/Logo-Atma-1.png" alt="marca3">
                 </div>
                 <div class="col-lg-2">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
+                    <img src="../assets/img/marcas/mayoliva.jpg" alt="marca4">
                 </div>
                 <div class="col-lg-2">
-                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                        preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-                            dy=".3em">140x140</text>
-                    </svg>
+                    <img src="../assets/img/marcas/natura.jpg" alt="marca5">
+                </div>
+                <div class="col-lg-1">
                 </div>
             </div>
         </section>
     </main>
 
     <footer class=" p-4">
-        <div class="container">
+        <div class="container text-center">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 p-2">
                 <div class="col mb-3">
                     <ul class="nav flex-column align-content-center align-items-center">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
-                                    class="btn btn-donar">DONAR</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted" type="button"
+                                data-bs-toggle="modal" data-bs-target="#donar"><button type="button"
+                                    class="btn btn-donar">DONAR</button></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration" class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit" class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-recetas"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mb-2"><a
+                                href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">PEDIR RECETAS</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a
+                                href="https://play.google.com/store/apps/details?id=com.mufumbo.android.recipe.search&hl=es&gl=US&pli=1"
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">DESCARGAR LA APP</button></a></li>
                     </ul>
                 </div>
@@ -251,25 +483,25 @@
                 <div class="col mb-3">
                     <h5>ENLACES ÚTILES</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="./recetas.html" class="nav-link p-0 text-muted">Recetas</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="./quienes-somos.html" class="nav-link p-0 text-muted">Quienes
-                                Somos</a></li>
+                        <li class="nav-item mb-2"><a href="./recetas.html"
+                                class="nav-link p-0 text-muted">Recetas</a></li>
+                        <li class="nav-item mb-2"><a href="./quienes-somos.html"
+                                class="nav-link p-0 text-muted">Quienes Somos</a></li>
                         <li class="nav-item mb-2"><a href="./novedades.html"
                                 class="nav-link p-0 text-muted">Novedades</a></li>
-                        <li class="nav-item mb-2"><a href="./contacto.html" class="nav-link p-0 text-muted">Contacto</a>
-                        </li>
+                        <li class="nav-item mb-2"><a href="./contacto.html"
+                                class="nav-link p-0 text-muted">Contacto</a></li>
                     </ul>
                 </div>
 
                 <div class="col mb-3">
                     <h5>REDES SOCIALES</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
+                        <li class="nav-item mb-2 p-2"><a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...." target="_blank" class="nav-link p-0 text-muted"><img
                                     class="log-footer" src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
+                        <li class="nav-item mb-2 p-2"><a href="https://www.instagram.com/" target="_blank" class="nav-link p-0 text-muted"><img
                                     class="log-footer" src="../assets/log/instagram.png" alt="instagram"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
+                        <li class="nav-item mb-2 p-2"><a href="https://www.facebook.com/" target="_blank" class="nav-link p-0 text-muted"><img
                                     class="log-footer" src="../assets/log/facebook.png" alt="facebook"></a></li>
                     </ul>
                 </div>

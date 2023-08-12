@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="¿Estás buscando recetas en Argentina? Tenemos más de 100 recetas para vos.
+    <meta name="description"
+        content="¿Estás buscando recetas en Argentina? Tenemos más de 100 recetas para vos.
     Nuestros trabajos están basados en responsabilidad y compromiso de cumplir lo prometido, con nosotros podés encontrar lo que buscas, ya sea recetas o cursos de cocina.">
 
-    <meta name="keywords" content="cocina, recetas, inicio, comida, almuerzo, merienda, desayuno, postre, cursos, novedades, favorito, platos, tenedores, cuchillos, cucharas, arroz, harina, salsas, crema, torta, chocotorta, contacto, noticias, nuevo, cursos, postres, mejores, equipo, trabajo, compromiso, staff, empresas, donación, argentina, buenos aires.">
+    <meta name="keywords"
+        content="cocina, recetas, inicio, comida, almuerzo, merienda, desayuno, postre, cursos, novedades, favorito, platos, tenedores, cuchillos, cucharas, arroz, harina, salsas, crema, torta, chocotorta, contacto, noticias, nuevo, cursos, postres, mejores, equipo, trabajo, compromiso, staff, empresas, donación, argentina, buenos aires.">
 
     <link rel="icon" href="./assets/log/log-principal.png">
 
@@ -24,23 +26,118 @@
         <div class="py-2">
             <div class="container d-flex flex-wrap justify-content-between">
                 <div class="pedir-recetas">
-                    <button type="button" class="btn btn-danger">PEDIR RECETAS</button>
+                    <a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                        target="_blank"><button type="button" class="btn btn-danger">PEDIR RECETAS</button></a>
                 </div>
 
                 <div class="text-end">
                     <ul class="d-flex list-inline">
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...."
+                                target="_blank" class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="./assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://www.instagram.com/" target="_blank"
+                                class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="./assets/log/instagram.png" alt="instagram"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="./assets/log/facebook.png" alt="facebook"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="./assets/log/log-dar.png" alt="donar"></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" class="text-decoration-none p-lg-2"><img
+                                    class="log-topnav" src="./assets/log/facebook.png" alt="facebook"></a></li>
+                        <li><a href="" class="text-decoration-none p-lg-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#donar"><img class="log-topnav" src="./assets/log/log-dar.png"
+                                    alt="donar"></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration" class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit" class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-recetas"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="color-nav px-3 py-2">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -89,14 +186,15 @@
         <!-- SECCIÓN DE TITULO PRINCIPAL -->
         <section class="banner-index">
             <div class="container">
-                    <div class="row align-items-center rounded-3 border border-danger shadow-lg">
-                      <div class="col-lg-7 p-lg-5 pt-lg-3 text-center">
+                <div class="row align-items-center rounded-3 border border-danger shadow-lg">
+                    <div class="col-lg-7 p-lg-5 pt-lg-3 text-center">
                         <h1 class="display-4 fw-bold text-white">ENCONTRA TU <br> RECETA IDEAL</h1>
-                      </div>
-                      <div class="col-lg-4 p-2 overflow-hidden shadow-lg">
-                          <img class="rounded-lg-3" src="./assets/img/promociones/probando3.jpg" alt="promocióm" width="100%">
-                      </div>
                     </div>
+                    <div class="col-lg-4 p-2 overflow-hidden shadow-lg">
+                        <img class="rounded-lg-3" src="./assets/img/promociones/probando3.jpg" alt="promocióm"
+                            width="100%">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -112,98 +210,335 @@
                             <img src="./assets/img/recetas-descatadas/panconsopa.jpg" alt="recetas-descatadas-1">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Escudella Catalana Tradicional</h3>
+                                <p class="card-text">Esta deliciosa sopa o, más bien, guiso, es una auténtica explosión
+                                    de sabores y aromas que evocan la calidez de los hogares y la tradición familiar. Se
+                                    trata de una sopa sustanciosa y reconfortante que combina diferentes ingredientes
+                                    como carnes, verduras y legumbres, cocidos a fuego lento durante varias horas para
+                                    obtener un caldo lleno de sabor.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#recetas1">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="recetas1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="recetas1"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="recetas1">Receta de
+                                                            Escudella Catalana Tradicional
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 6 porciones <br> <b>Tiempo de preparación:</b>
+                                                        Alrededor de 3-4 horas, incluyendo el tiempo de cocción de las
+                                                        carnes y las verduras. <br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>500 g de carne de cerdo (costillas, panceta, oreja,
+                                                                morro, etc.) y 500 g de gallina o pollo troceado.</li>
+                                                            <li>Sal al gusto y Aceite de oliva virgen extra.</li>
+                                                            <li>2 papas (patatas) grandes, 1 ramita de apio, 1 cebolla
+                                                                grande, 2 zanahorias, 2 puerros, 1 repollo blanco, 2
+                                                                hojas de laurel, 4 dientes de ajo y 1 cucharada de
+                                                                pimentón dulce.</li>
+                                                            <li>
+                                                                200 g de butifarras (blanca y negra), 200 g de
+                                                                butifarrón, 200 g de carne de ternera y 200 g de
+                                                                garbanzos remojados y cocidos al dente.</li>
+                                                            <li>
+                                                                2 huesos de jamón, 2 huesos de caña de cerdo y 1 hueso
+                                                                de espinazo de cerdo.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="./assets/img/recetas-descatadas/panconsopa.jpg" alt="recetas-descatadas-2">
+                            <img src="./assets/img/recetas-descatadas/asadosano.jpg" alt="recetas-descatadas-2">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Entrecot a la plancha</h3>
+                                <p class="card-text">Es conocido por su sabor intenso debido a la presencia del hueso, y
+                                    algunas personas prefieren su textura y sabor. Sin embargo, el entrecot suele ser
+                                    más magro y se aprecia por su jugosidad y ternura.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#recetas2">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="recetas2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="recetas2"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="recetas2">Receta de Entrecot
+                                                            a la plancha
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 1 porción <br> <b>Tiempo de preparación:</b> 40
+                                                        minutos.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>300 g de entrecot de ternera (preferiblemente de grosor
+                                                                entre 2-3cm).</li>
+                                                            <li>Sal gruesa y Pimienta negra molida.</li>
+                                                            <li>Aceite vegetal o aceite de oliva (para engrasar la
+                                                                plancha).</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="./assets/img/recetas-descatadas/panconsopa.jpg" alt="recetas-descatadas-3">
+                            <img src="./assets/img/recetas-descatadas/caldito.jpg" alt="recetas-descatadas-3">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Crema de calabaza</h3>
+                                <p class="card-text">Es una sopa muy típica y deliciosa, dependiendo de quién la prepare
+                                    puede ser una sopa líquida o más espesa y suave. Una maravilla del cielo, prepararla
+                                    es muy simple, solo tendremos que mezclar la calabaza cocida y otros ingredientes,
+                                    como cebolla, ajo, caldo de pollo o de verduras, leche o crema, y especias.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#recetas3">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="recetas3" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="recetas3"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="recetas3">Receta de crema de
+                                                            calabaza
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 6 porciones <br> <b>Tiempo de preparación:</b> 50
+                                                        minutos.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>1 calabaza grande, 1 cebolla mediana, 1 papa en cubo
+                                                                chicos y 2 dientes de ajo.</li>
+                                                            <li>1 litro de caldo de verduras, Sal y Pimienta al gusto.
+                                                            </li>
+                                                            <li>Aceite de oliva y Queso rallado (Opcional, para
+                                                                decorar).</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="./assets/img/recetas-descatadas/panconsopa.jpg" alt="recetas-descatadas-4">
+                            <img src="./assets/img/recetas-descatadas/pollo.jpg" alt="recetas-descatadas-4">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Pollo al chilindrón</h3>
+                                <p class="card-text">Es un plato tradicional de la cocina española, específicamente de
+                                    la región de Aragón. Se caracteriza por ser un guiso de pollo con una salsa espesa y
+                                    sabrosa a base de tomate, pimientos, cebolla, ajo y especias. Generalmente esta
+                                    preparación se acompaña de aves pero también se utiliza para cocinar otras carnes,
+                                    como el cordero o el conejo.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#recetas4">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="recetas4" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="recetas4"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="recetas4">Receta de pollo al
+                                                            chilindrón
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 4 porción <br> <b>Tiempo de preparación:</b> 1
+                                                        hora.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>4 muslos de pollo y 1 cebolla grande (cortada en
+                                                                juliana).</li>
+                                                            <li>2 pimientos rojos y 2 pimientos verdes (cortados en
+                                                                tiras).</li>
+                                                            <li>3 dientes de ajo, picados finamente y 400 gr de tomate
+                                                                triturado.</li>
+                                                            <li>1 cucharadita de pimentón dulce, 1 hoja de laurel, Sal y
+                                                                pimienta a gusto.</li>
+                                                            <li>Aceite de oliva virgen extra cantidad necesaria.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="./assets/img/recetas-descatadas/panconsopa.jpg" alt="recetas-descatadas-5">
+                            <img src="./assets/img/recetas-descatadas/licuado.jpg" alt="recetas-descatadas-5">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Receta de Licuado de banana</h3>
+                                <p class="card-text">Comenzar el día con toda la energía no se consigue simplemente
+                                    tomando un café cada mañana. Siempre hay mejores opciones que nos ayudan a despertar
+                                    y levantarnos el ánimo. Por esto te traigo esta idea de hacer licuado de banana de
+                                    una manera original, más el licuado típico de banana para tu próximo desayuno.</p>
+                                <p class="card-text"></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#recetas5">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="recetas5" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="recetas5"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="recetas5">Receta de Licuado
+                                                            de banana
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 1 porción <br> <b>Tiempo de preparación:</b> 30
+                                                        minutos.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>2 bananas maduras y 300 ml de leche entera.</li>
+                                                            <li>Una cucharada de stevia o 2 de azúcar. La cantidad de
+                                                                endulzante es al gusto.</li>
+                                                            <li>Una pizca de canela y 2 cubitos de hielo.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="./assets/img/recetas-descatadas/panconsopa.jpg" alt="recetas-descatadas-6">
+                            <img src="./assets/img/recetas-descatadas/medialunas.jpg" alt="recetas-descatadas-6">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Medialunas de manteca caseras</h3>
+                                <p class="card-text">Uy ésto se pone cada vez mejor. Ésta es una receta imperdible de
+                                    éste canal: medialunas de manteca señor@s, caseritas, calientitas, increíbles! Antes
+                                    que nada quiero contarles que hice ésta receta de medialunas porque no paraban de
+                                    comentarme en las redes sociales pidiéndola.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#recetas6">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="recetas6" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="recetas6"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="recetas6">Receta de
+                                                            Medialunas de manteca caseras
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 24 porción <br> <b>Tiempo de preparación:</b> 2
+                                                        horas.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>1/2 Kg de harina 0000, 225cc. de leche y 25g. de
+                                                                levadura.</li>
+                                                            <li>1 huevo, 100g. azúcar, 15g. miel y 15g. sal.</li>
+                                                            <li>200g. manteca y 25g. más de harina (para el empaste).
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -226,10 +561,14 @@
                             <strong class="d-inline-block mb-2 text-primary">Noticias / Consejos</strong>
                             <h3 class="mb-0">¿Cómo hacer una dieta saludable?</h3>
                             <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Deleniti, accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque
-                                minus, aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
-                            <a href="#" class="stretched-link">+ Información</a>
+                            <p class="card-text mb-auto">Un plan de alimentación que ayuda a controlar su peso incluye
+                                una variedad de alimentos saludables. Agregar una variedad de colores a su plato es como
+                                si estuviera comiendo un arcoíris. Las verduras de hoja verde oscura, las naranjas y los
+                                tomates—incluso las hierbas frescas—están llenos de vitaminas, fibra y minerales.
+                                Agregar pimientos, brócoli o cebollas congelados a guisos y tortillas aumenta el color y
+                                los nutrientes.</p>
+                            <a href="https://www.youtube.com/watch?v=fivugT6fw8M" target="_blank"
+                                class="stretched-link">+ Información</a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                             <img src="./assets/img/promociones/probando2.jpg" alt="noticias-consejos">
@@ -243,10 +582,14 @@
                             <strong class="d-inline-block mb-2 text-success">Noticias / Consulta viral</strong>
                             <h3 class="mb-0">Consejos para una vida y alimentación feliz.</h3>
                             <div class="mb-1 text-muted">Nov 11</div>
-                            <p class="mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
-                            <a href="#" class="stretched-link">+ Información</a>
+                            <p class="mb-auto">El mundo del wellness tiene mucho para decir con respecto a este objetivo
+                                que cada vez más gente se plantea. Es que con tanta información en materia de
+                                alimentación, sueño y ejercicio físicos, la meta de vivir más tiempo es posible. Vivir
+                                sano y ser feliz no es magia, es -para muchos- una cuestión de sentido común. Aquí, 7
+                                maneras sencillas para vivir una vida más feliz, saludable y posiblemente incluso más
+                                larga.</p>
+                            <a href="https://www.infobae.com/tendencias/2022/09/09/6-consejos-para-vivir-una-vida-feliz-saludable-y-posiblemente-mas-duradera/"
+                                target="_blank" class="stretched-link">+ Información</a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                             <img src="./assets/img/promociones/platocompleto.jpg" alt="noticias-saludable">
@@ -261,22 +604,10 @@
                 <div class="col">
                     <div class="cardcursos-1 card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="titulo-cursos pt-5 mt-5 mb-4 display-6 lh-1">Short title, long jacket</h2>
+                            <h2 class="titulo-cursos pt-5 mt-5 mb-4 display-6 lh-1">Master chef Online</h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="./assets/log/log-principal.png" alt="log-principal" width="60%">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Earth</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>3d</small>
                                 </li>
                             </ul>
                         </div>
@@ -286,24 +617,10 @@
                 <div class="col">
                     <div class="cardcursos-2 card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="titulo-cursos pt-5 mt-5 mb-4 display-6 lh-1">Much longer title that wraps to
-                                multiple
-                                lines</h2>
+                            <h2 class="titulo-cursos pt-5 mt-5 mb-4 display-6 lh-1">Formación profesional en cocina</h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="./assets/log/log-principal.png" alt="log-principal" width="60%">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>Pakistan</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>4d</small>
                                 </li>
                             </ul>
                         </div>
@@ -313,23 +630,11 @@
                 <div class="col">
                     <div class="cardcursos-3 card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h2 class="titulo-cursos pt-5 mt-5 mb-4 display-6 lh-1 ">Another longer title belongs here
+                            <h2 class="titulo-cursos pt-5 mt-5 mb-4 display-6 lh-1 ">Ser gerente en restaurantes
                             </h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="./assets/log/log-principal.png" alt="log-principal" width="60%">
-                                </li>
-                                <li class="d-flex align-items-center me-3">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#geo-fill" />
-                                    </svg>
-                                    <small>California</small>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <svg class="bi me-2" width="1em" height="1em">
-                                        <use xlink:href="#calendar3" />
-                                    </svg>
-                                    <small>5d</small>
                                 </li>
                             </ul>
                         </div>
@@ -340,15 +645,110 @@
     </main>
 
     <footer class=" p-4">
-        <div class="container">
+        <div class="container text-center">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 p-2">
                 <div class="col mb-3">
                     <ul class="nav flex-column align-content-center align-items-center">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
-                                    class="btn btn-donar">DONAR</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted" type="button"
+                                data-bs-toggle="modal" data-bs-target="#donar"><button type="button"
+                                    class="btn btn-donar">DONAR</button></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration" class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit" class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-recetas"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mb-2"><a
+                                href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">PEDIR RECETAS</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a
+                                href="https://play.google.com/store/apps/details?id=com.mufumbo.android.recipe.search&hl=es&gl=US&pli=1"
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">DESCARGAR LA APP</button></a></li>
                     </ul>
                 </div>
@@ -374,11 +774,11 @@
                 <div class="col mb-3">
                     <h5>REDES SOCIALES</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
+                        <li class="nav-item mb-2 p-2"><a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...." target="_blank" class="nav-link p-0 text-muted"><img
                                     class="log-footer" src="./assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
+                        <li class="nav-item mb-2 p-2"><a href="https://www.instagram.com/" target="_blank" class="nav-link p-0 text-muted"><img
                                     class="log-footer" src="./assets/log/instagram.png" alt="instagram"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
+                        <li class="nav-item mb-2 p-2"><a href="https://www.facebook.com/" target="_blank" class="nav-link p-0 text-muted"><img
                                     class="log-footer" src="./assets/log/facebook.png" alt="facebook"></a></li>
                     </ul>
                 </div>

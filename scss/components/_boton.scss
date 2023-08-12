@@ -30,11 +30,10 @@
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
-}
+    &:hover{
+        background-color: $background-general;
 
-.btn-suscripción:hover {
-    background-color: $background-general;
-
+    }
 }
 
 .btn-donar {
@@ -42,9 +41,8 @@
     background-color: $background-general;
     font-weight: bold;
     font-size: 1.2rem;
-}
-
-.btn-donar:hover {
-    background-color: #cb0e0eed;
-    color: white;
+    &:hover{
+        background-color: #cb0e0eed;
+        color: white;
+    }
 }

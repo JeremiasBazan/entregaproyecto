@@ -1,4 +1,4 @@
-// STYLE MEDIA QUERIES
+// MIXIN DE  MEDIA QUERIES
 @mixin mediaqueries-celu-s{
 	.banner-index {
         height: 80vh;
@@ -68,5 +68,34 @@
     }
     .banner-contacto{
         height: 50vh;
+    }
+}
+
+// MIXIN DE ANIMACIONES DE LOS PRESENTACIONES
+@mixin animation{
+-webkit-animation: main_titulo 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+animation: main_titulo 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes main_titulo {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes main_titulo {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
     }
 }

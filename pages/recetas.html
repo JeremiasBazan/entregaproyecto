@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="¿Estás buscando recetas en Argentina? Tenemos más de 100 recetas para vos.
+    <meta name="description"
+        content="¿Estás buscando recetas en Argentina? Tenemos más de 100 recetas para vos.
     Nuestros trabajos están basados en responsabilidad y compromiso de cumplir lo prometido, con nosotros podés encontrar lo que buscas, ya sea recetas o cursos de cocina.">
 
-    <meta name="keywords" content="cocina, recetas, inicio, comida, almuerzo, merienda, desayuno, postre, cursos, novedades, favorito, platos, tenedores, cuchillos, cucharas, arroz, harina, salsas, crema, torta, chocotorta, argentina, buenos aires.">
+    <meta name="keywords"
+        content="cocina, recetas, inicio, comida, almuerzo, merienda, desayuno, postre, cursos, novedades, favorito, platos, tenedores, cuchillos, cucharas, arroz, harina, salsas, crema, torta, chocotorta, argentina, buenos aires.">
 
     <link rel="icon" href="../assets/log/log-principal.png">
 
@@ -24,27 +26,128 @@
         <div class="py-2">
             <div class="container d-flex flex-wrap justify-content-between">
                 <div class="pedir-recetas">
-                    <button type="button" class="btn btn-danger">PEDIR RECETAS</button>
+                    <a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                        target="_blank"><button type="button" class="btn btn-danger">PEDIR RECETAS</button></a>
                 </div>
 
                 <div class="text-end">
                     <ul class="d-flex list-inline">
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...."
+                                target="_blank" class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
+                        <li><a href="https://www.instagram.com/" target="_blank"
+                                class="text-decoration-none p-lg-2"><img class="log-topnav"
                                     src="../assets/log/instagram.png" alt="instagram"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="../assets/log/facebook.png" alt="facebook"></a></li>
-                        <li><a href="" class="text-decoration-none p-lg-2"><img class="log-topnav"
-                                    src="../assets/log/log-dar.png" alt="donar"></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" class="text-decoration-none p-lg-2"><img
+                                    class="log-topnav" src="../assets/log/facebook.png" alt="facebook"></a></li>
+                        <li><a href="" class="text-decoration-none p-lg-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#donar"><img class="log-topnav" src="../assets/log/log-dar.png"
+                                    alt="donar"></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de
+                                                            Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de
+                                                            Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado
+                                                            Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del
+                                                            titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la
+                                                            tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de
+                                                            crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration"
+                                                            class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de
+                                                            dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="color-nav px-3 py-2">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="./index.html" class="d-flex align-items-center me-lg-auto text-white text-decoration-none">
+                    <a href="../index.html"
+                        class="d-flex align-items-center me-lg-auto text-white text-decoration-none">
                         <img src="../assets/log/log-principal.png" alt="logo-principal">
                     </a>
 
@@ -85,6 +188,7 @@
         </div>
     </header>
 
+
     <main>
         <!-- SECCIÓN DE TITULO PRINCIPAL -->
         <section class="banner-recetas">
@@ -105,16 +209,44 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-almuerzoycena/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
-                                alt="desayuno-1">
+                            <img src="../assets/img/recetas/mermeladadenaranja.jpg"
+                            alt="desayuno-1">
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Mermelada de naranja</h3>
+                                <p class="card-text">Un amor de los de verdad, ¿quién no desayunó alguna vez solo unas galletas con mermelada de naranja🍊?. No digo que esté bien alimentarse así a las corridas, pero en apuros nos alegra el día tener un frasco de estos. Hay una gran variedad de recetas para hacer mermelada de naranja, si no preguntale a la abuela.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#desayuno1">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="desayuno1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="desayuno1"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="desayuno1">Receta de Mermelada de naranja
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 4 frascos <br> <b>Tiempo de preparación:</b> 1
+                                                        hora.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>1 kg de naranjas, 600 gr de azúcar y Jugo de un limón.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -122,16 +254,46 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-almuerzoycena/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
+                            <img src="../assets/img/recetas/tortitasdeavena.jpg"
                                 alt="merienda-2">
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Tortitas de avena</h3>
+                                <p class="card-text">Rellenas, bañadas, con diferentes toppings o agregados a la mezcla, las tortitas de avena son fáciles de preparar y gracias a su versatilidad, adaptables al gusto de todos en casa. Hoy les vamos a contar la mejor receta de tortitas con harina de avena, algunos tips que funcionan muy bien y variantes para dejar a cada integrante de tu familia o amigo/a contento/a.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#desayuno2">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="desayuno2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="desayuno2"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="desayuno2">Receta de Tortitas de avena
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 2 porciones <br> <b>Tiempo de preparación:</b> 15
+                                                        minutos.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>2 huevos medianos y 60 gr de avena en copos o harina de avena.</li>
+                                                            <li>5 gr de levadura nutricional tipo Royal y 30 gr de azúcar (opcional).</li>
+                                                            <li>1 pizca de sal, Leche cantidad necesaria y Mantequilla para humectar la sartén de ser necesario.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -139,16 +301,46 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-almuerzoycena/brett-jordan-8xt8-HIFqc8-unsplash.jpg"
+                            <img src="../assets/img/recetas/gofresbelgas.jpg"
                                 alt="desayuno-3">
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Gofres belgas caseros</h3>
+                                <p class="card-text">Son una deliciosa alternativa para el desayuno, el brunch o incluso como un postre especial luego del almuerzo o cena. Además de su sabor propio, son versátiles y pueden servirse con una amplia variedad de coberturas: entre otras muchas opciones, frutas frescas, nata batida, miel, jarabe de arce, mantequilla de maní o chocolate.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#desayuno3">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="desayuno3" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="desayuno3"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="desayuno3">Receta de Gofres belgas caseros
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 6 porciones <br> <b>Tiempo de preparación:</b> 90
+                                                        minutos.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>600 gr harina, 8 gr levadura, 36 gr azúcar y 80 gr de azúcar perlada.</li>
+                                                            <li>250 ml de agua con gas a temperatura ambiente.</li>
+                                                            <li>2 huevos, 225 gr de mantequilla de maní y Frutas para colocar sobre los gofres.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -167,16 +359,56 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-almuerzoycena/louis-hansel-dphM2U1xq0U-unsplash.jpg"
-                                alt="almuerzo-1">
+                            <img src="../assets/img/recetas/cena1.jpg" alt="cena1">
+
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Cazuela de Pollo</h3>
+                                <p class="card-text">La cazuela en general, es un plato característico de diversas
+                                    culturas en América Latina y, por lo tanto, su preparación variará de acuerdo a las
+                                    tradiciones gastronómicas de cada país. Una de esas recetas de toda la vida que se
+                                    ha ido adaptando y que en cada casa se hace de manera distinta.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#cena1">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="cena1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="cena1"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="cena1">Receta de Cazuela de
+                                                            Pollo
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 2 porciones <br> <b>Tiempo de preparación:</b> 1
+                                                        hora.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>1/2 kg. de pollo en presas o pechugas de pollo, 1
+                                                                cebolla colorada (yo le puse cebolla blanca) y 3 dientes
+                                                                de ajo.</li>
+                                                            <li>2 pimientos rojos y 2 pimientos verdes (cortados en
+                                                                tiras).</li>
+                                                            <li>1 cdita. de cúrcuma, 1 cdita. de jengibre rallado, 1
+                                                                cdita. de comino y 150g. de aceitunas verdes.</li>
+                                                            <li>½ taza de jugo de limón, Aceite de oliva, sal, pimienta
+                                                                y ½ vaso de agua.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -184,16 +416,70 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-almuerzoycena/louis-hansel-dphM2U1xq0U-unsplash.jpg"
-                            alt="cena-2">
+                            <img src="../assets/img/recetas/cena2.jpg" alt="cena2">
+
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Pizza Caprese Casera</h3>
+                                <p class="card-text">¿Ya te diste cuenta que estamos hablando de la pizza? pero te
+                                    advierto que la de hoy no es cualquier pizza… Hoy hacemos una pizza caprese! <br>
+                                    Sabemos que la pizza es un plato que nunca falla, además, si logramos encontrar los
+                                    ingredientes ideales, la comida se hace sola y esa es la mejor parte, que con esta
+                                    receta no hay que trabajar mucho para hacer un gran plato.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#cena2">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="cena2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="cena2"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="cena2">Receta de Pizza
+                                                            Caprese Casera
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 8 porciones <br> <b>Tiempo de preparación:</b> 2
+                                                        hora.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>En un bol o taza colocar 25 gr de pan de levadura fresca
+                                                                y media taza de agua tibia. Acto seguido, agregar 1
+                                                                cucharada de azúcar y luego mezclar bien hasta que se
+                                                                formen burbujitas. Tapar con un nylon y dejar en reposo
+                                                                10 minutos. <br>
+                                                                En otro recipiente, colocar ½ kilo de harina 000 y
+                                                                mezclarla con ½ cucharada de sal. Hacer un hueco y en el
+                                                                centro volcar la media taza de agua con la levadura
+                                                                levada. Por último sumar 1 taza de agua tibia y con las
+                                                                manos unir todos los ingredientes hasta formar una masa.
+                                                                Agregamos de a poco las 4 cdas de aceite de oliva y
+                                                                volvemos a amasar. <br>
+                                                                Dejar que la masa descanse unos 15 minutos, y luego la
+                                                                amasamos. <br>
+                                                                Solo queda dividir la masa en dos bollos del mismo
+                                                                tamaño. <br>
+                                                                Agarramos uno y lo estiramos hasta lograr el grosor
+                                                                deseado. Ponemos esto en una fuente para pizza y lo
+                                                                dejamos descansar un rato más en lugar templado por
+                                                                aproximadamente 15 minutos. </li>
+                                                            <li>Albahaca, Tomate, Queso mozzarella y
+                                                                Aceite de oliva.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -201,16 +487,51 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-almuerzoycena/louis-hansel-dphM2U1xq0U-unsplash.jpg"
-                            alt="almuerzo-3">
+                            <img src="../assets/img/recetas/almuerzo1.jpg" alt="almuerzo1">
+
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Pollo al curry fácil</h3>
+                                <p class="card-text">Es la Madonna de las especias. La reina. Yo no sé qué tan presente
+                                    lo tienen en sus vidas, pero sepan que una vez que prueben esta receta, se van a
+                                    volver adictos.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#almuerzo1">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="almuerzo1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="almuerzo1"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="almuerzo1">Receta de Pollo
+                                                            al curry fácil
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 1 porción <br> <b>Tiempo de preparación:</b> 25
+                                                        minutos.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>2 supremas o pechugas de pollo, 1 cda. panzona de curry
+                                                                (suave o picante) y 2 dientes de ajo.</li>
+                                                            <li> 1 taza de caldo de pollo (o de verduras (calditos
+                                                                caseros), o agua + caldito).</li>
+                                                            <li>Sal, pimienta y aceite de oliva.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -229,16 +550,53 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-descatadas/panconsopa.jpg" alt="postres-1">
+                            <img src="../assets/img/recetas/capirotada.jpg" alt="postres-1">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Capirotada</h3>
+                                <p class="card-text">Esta es una de esas recetas que pasa de la abuelita a la madre, de
+                                    la madre a los hijos, de los hijos a la nietos y así de generación en generación,
+                                    por los siglos de los siglos, ¡amén!.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#postres1">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="postres1" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="postres1"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="postres1">Receta de
+                                                            Capirotada
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 12 porciones <br> <b>Tiempo de preparación:</b> 1
+                                                        hora.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>12 rebanadas de pan y 1 taza de piloncillo (panela)
+                                                                rallado.</li>
+                                                            <li>2 ramas de canela (o dos cucharadas de canela en polvo),
+                                                                2 clavos de olor, 4 tazas de agua y 1 taza de queso
+                                                                fresco desmenuzado.</li>
+                                                            <li>½ taza de cacahuates (maní) tostados sin sal, ½ taza de
+                                                                nueces troceadas y ½ taza de pasas de uva.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -246,16 +604,52 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="../assets/img/recetas-descatadas/panconsopa.jpg" alt="postres-2">
+                            <img src="../assets/img/recetas/torta.jpg" alt="postres-2">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Torta Banoffee tradicional</h3>
+                                <p class="card-text">Un postre muy especial para esta comunidad a la que nos encantan
+                                    las recetas fáciles y rápidas que nos permita comer algo dulce en un toque, porque
+                                    siempre bajón. Entonces les presentamos la receta de esta famosa Tarta o Torta
+                                    Banoffee de plátano o banana, por fuera parece ser super sofisticada pero realmente
+                                    van a ver que es una pavada, ya que nosotros le vamos a encontrar la vuelta y lo
+                                    hacemos en un toque.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#postres2">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="postres2" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="postres2"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="postres2">Receta de Torta
+                                                            Banoffee tradicional
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 10 porciones <br> <b>Tiempo de preparación:</b> 1
+                                                        hora.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>1 paquete de galletas de vainilla.</li>
+                                                            <li>150 gr. de manteca, 75 gr. de azúcar, 250 gr. de crema
+                                                                de leche, 1 pote de dulce de leche y 3 bananas.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -266,13 +660,48 @@
                             <img src="../assets/img/recetas-descatadas/panconsopa.jpg" alt="postres-3">
 
                             <div class="card-body">
-                                <h3>Pollo Al Horno</h3>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
-                                    accusamus in. Sequi repudiandae natus voluptatem quisquam veniam earum neque minus,
-                                    aliquam odio vel, rem sit quasi amet laboriosam dolore cupiditate.</p>
+                                <h3>Postre de maicena</h3>
+                                <p class="card-text">postre de maicena o maizena. Bien fácil y práctico!. Si existe
+                                    alguna persona en esta sala que cuando prueba un postre de maicena no tiene
+                                    flashbacks de la niñez que levante la mano. Para mí no existe persona que no le pase
+                                    eso. Cuando les preguntan qué gusto tienen estos postrecitos la respuesta correcta
+                                    es: la infancia</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button class="btn btn-recetas">VER RECETA</button>
+                                        <button type="button" class="btn btn-recetas" data-bs-toggle="modal"
+                                            data-bs-target="#postres3">
+                                            VER RECETA
+                                        </button>
+                                        <div class="modal fade" id="postres3" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="postres3"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title fw-bold" id="postres3">Receta de Postre
+                                                            de maicena
+                                                            </Base>
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <b>Rinde:</b> 2 porciones <br> <b>Tiempo de preparación:</b> 15
+                                                        minutos.<br>
+                                                        <b>Ingredientes:</b>
+                                                        <ul>
+                                                            <li>2 tazas de leche, ½ taza de azúcar y 3 yemas.</li>
+                                                            <li>2 cucharadas de maicena, Esencia de vainilla y Cáscara
+                                                                de naranja o limón.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-recetas"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -285,15 +714,115 @@
 
 
     <footer class=" p-4">
-        <div class="container">
+        <div class="container text-center">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 p-2">
                 <div class="col mb-3">
                     <ul class="nav flex-column align-content-center align-items-center">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
-                                    class="btn btn-donar">DONAR</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted" type="button"
+                                data-bs-toggle="modal" data-bs-target="#donar"><button type="button"
+                                    class="btn btn-donar">DONAR</button></a>
+                            <div class="modal fade" id="donar" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="donar" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title fw-bold" id="donar">Donación</Base>
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="needs-validation">
+                                                <div class="my-3">
+                                                    <div class="form-check">
+                                                        <input id="credit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" checked required>
+                                                        <label class="form-check-label" for="credit">Tarjeta de
+                                                            Débito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="debit" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="debit">Tarjeta de
+                                                            Crédito</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input id="paypal" name="paymentMethod" type="radio"
+                                                            class="form-check-input" required>
+                                                        <label class="form-check-label" for="paypal">Mercado
+                                                            Pago</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row gy-3">
+                                                    <div class="col-md-6">
+                                                        <label for="cc-name" class="form-label">Nombre del
+                                                            titular</label>
+                                                        <input type="text" class="form-control" id="cc-name"
+                                                            placeholder="" required>
+                                                        <small class="text-muted">Nombre completo, como se muestra en la
+                                                            tarjeta</small>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere el nombre de la tarjeta
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-number" class="form-label">Número de tarjeta de
+                                                            crédito</label>
+                                                        <input type="text" class="form-control" id="cc-number"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Se requiere número de tarjeta de crédito
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-expiration"
+                                                            class="form-label">Vencimiento</label>
+                                                        <input type="text" class="form-control" id="cc-expiration"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Fecha de vencimiento requerida
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <label for="cc-cvv" class="form-label">CVV</label>
+                                                        <input type="text" class="form-control" id="cc-cvv"
+                                                            placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Código de seguridad requerido
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <label for="cc-precio" class="form-label">Monto de
+                                                            dinero</label>
+                                                        <input type="text" class="form-control" id="cc-precio"
+                                                            placeholder="Ingrese el monto que desea donar" required>
+                                                        <div class="invalid-feedback">
+                                                            Monto requerido
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="my-4">
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-donar">DONAR</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item mb-2"><a
+                                href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!%20%C2%BFC%C3%B3mo%20est%C3%A1n?%20Quer%C3%ADa%20pedirles%20la%20receta%20de%20...."
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">PEDIR RECETAS</button></a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><button type="button"
+                        <li class="nav-item mb-2"><a
+                                href="https://play.google.com/store/apps/details?id=com.mufumbo.android.recipe.search&hl=es&gl=US&pli=1"
+                                target="_blank" class="nav-link p-0 text-muted"><button type="button"
                                     class="btn btn-footer">DESCARGAR LA APP</button></a></li>
                     </ul>
                 </div>
@@ -319,12 +848,16 @@
                 <div class="col mb-3">
                     <h5>REDES SOCIALES</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
-                                    class="log-footer" src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
-                                    class="log-footer" src="../assets/log/instagram.png" alt="instagram"></a></li>
-                        <li class="nav-item mb-2 p-2"><a href="#" class="nav-link p-0 text-muted"><img
-                                    class="log-footer" src="../assets/log/facebook.png" alt="facebook"></a></li>
+                        <li class="nav-item mb-2 p-2"><a
+                                href="https://api.whatsapp.com/send?phone=+5491167945074&text=Hola!!!%20Quer%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20...."
+                                target="_blank" class="nav-link p-0 text-muted"><img class="log-footer"
+                                    src="../assets/log/whatsapp.png" alt="whatsapp"></a></li>
+                        <li class="nav-item mb-2 p-2"><a href="https://www.instagram.com/" target="_blank"
+                                class="nav-link p-0 text-muted"><img class="log-footer"
+                                    src="../assets/log/instagram.png" alt="instagram"></a></li>
+                        <li class="nav-item mb-2 p-2"><a href="https://www.facebook.com/" target="_blank"
+                                class="nav-link p-0 text-muted"><img class="log-footer" src="../assets/log/facebook.png"
+                                    alt="facebook"></a></li>
                     </ul>
                 </div>
 

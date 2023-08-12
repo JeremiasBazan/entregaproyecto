@@ -1,4 +1,24 @@
 @charset "UTF-8";
+@-webkit-keyframes main_titulo {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes main_titulo {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 /* STYLES GENERALES ------------------------------------------------------------------------------- */
 * {
   margin: 0;
@@ -11,7 +31,7 @@ html {
   font-size: 85.5%;
 }
 
-img {
+html img {
   width: 100%;
 }
 
@@ -93,6 +113,8 @@ img {
   width: 100%;
   padding: 3rem 0;
   opacity: 5;
+  -webkit-animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .img-banerprincipal {
@@ -127,6 +149,8 @@ img {
   width: 100%;
   height: 50vh;
   font-size: 30px;
+  -webkit-animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /* QUIENES SOMOS ------------------------------------------------------------------------------- */
@@ -137,6 +161,8 @@ img {
   width: 100%;
   height: 50vh;
   font-size: 30px;
+  -webkit-animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /* NOVADADES ------------------------------------------------------------------------------- */
@@ -147,6 +173,8 @@ img {
   width: 100%;
   height: 50vh;
   font-size: 30px;
+  -webkit-animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /* CONTACTO ------------------------------------------------------------------------------- */
@@ -157,6 +185,8 @@ img {
   width: 100%;
   height: 50vh;
   font-size: 30px;
+  -webkit-animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: main_titulo 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .img-suscripción {
@@ -192,12 +222,10 @@ img {
 footer {
   background-color: rgba(195, 137, 3, 0.568);
 }
-
-.log-footer {
+footer .log-footer {
   width: 15%;
 }
-
-.log-principalfooter {
+footer .log-principalfooter {
   width: 55%;
 }
 
@@ -233,7 +261,6 @@ footer {
   font-weight: bold;
   font-size: 1.2rem;
 }
-
 .btn-suscripción:hover {
   background-color: rgb(228, 174, 26);
 }
@@ -244,7 +271,6 @@ footer {
   font-weight: bold;
   font-size: 1.2rem;
 }
-
 .btn-donar:hover {
   background-color: rgba(203, 14, 14, 0.9294117647);
   color: white;
